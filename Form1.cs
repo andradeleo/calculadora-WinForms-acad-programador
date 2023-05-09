@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace CalculadoraWinFormsApp1
 {
     public partial class Form1 : Form
@@ -18,7 +20,7 @@ namespace CalculadoraWinFormsApp1
             if (operation == "")
             {
                 ResultField.Text += button.Text;
-                firstValue = double.Parse(ResultField.Text);
+                firstValue = Convert.ToDouble(ResultField.Text, new CultureInfo("en-US"));
             }
             else
             {
